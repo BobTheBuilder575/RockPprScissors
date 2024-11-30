@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute elements evenly */
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: rgb(193, 229, 253);
+    overflow: hidden; /* Prevent scrolling */
+    padding: 0; /* Remove extra padding */
+}
+
+h1 {
+    position: absolute;
+    top: 2vh;
+    padding: 0.7%;
+    font-size: 5vh; /* Scale heading size based on viewport height */
+    color: hsl(0, 0%, 25%);
+    text-align: center;
+    margin: 0;
+}
+
+.choices {
+    position: absolute;
+    top: 15vh;
+    display: flex;
+    justify-content: center;
+    gap: 5vw; /* Reduce gap between buttons */
+    margin: 0; /* Remove extra margin */
+}
+
+.choices button {
+    font-size: 8vh; /* Scale buttons to fit viewport */
+    min-width: 10vw; /* Maintain consistent size */
+    border-radius: 50%;
+    aspect-ratio: 1; /* Keep buttons circular */
+    background-color: hsl(33, 100%, 84%);
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.choices button:hover {
+    background-color: hsl(33, 100%, 98%);
+    text-shadow: 1px 1px 1px rgb(128, 125, 125);
+}
+
+.details-box {
+    position: absolute;
+    bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the content */
+    text-align: center;
+    width: 90%; /* Adjust width dynamically */
+    max-width: 400px;
+    padding: 2vh; /* Add minimal padding */
+    border: 2px solid hsl(33, 100%, 84%);
+    border-radius: 15px;
+    background-color: hsl(33, 100%, 96%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.details-box div {
+    font-size: 2vh; /* Scale text size */
+    margin: 1vh 0; /* Adjust spacing */
+    
+}
+
+#playerDisplay, #computerDisplay, #resultDisplay {
+    line-height: 1.2; /* Tighten spacing between lines */
+}
+
+.greenText {
+    color: rgb(54, 161, 54); /* Green color for a win */
+}
+
+.redText {
+    color: rgb(211, 87, 87); /* Red color for a loss */
+}
+
+
+.scoreDisplay {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 2vh; /* Adjust score size */
+    margin: 1vh 0; /* Add small spacing */
+}
+
+.restart-container {
+    margin: 0; /* Remove extra margin */
+}
+
+#restartButton {
+    font-size: 2vh; /* Scale button size */
+    padding: 1vh 2vh;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(33, 100%, 84%);
+    color: hsl(0, 0%, 25%);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#restartButton:hover {
+    background-color: hsl(33, 100%, 98%);
+    color: hsl(0, 0%, 15%);
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3vh; /* Slightly smaller heading */
+    }
+
+    .choices button {
+        margin: 1vw;
+        position: relative;
+        top: 17vh;
+        font-size: 17vw; /* Scale buttons for smaller screens */
+    }
+
+    .details-box {
+        padding: 1vh; /* Reduce padding */
+    }
+
+    .details-box div, .scoreDisplay {
+        font-size: 1.8vh; /* Adjust text size */
+    }
+
+    #restartButton {
+        font-size: 1.8vh; /* Adjust button size */
+        padding: 0.8vh 1.5vh;
+    }
+}
+
